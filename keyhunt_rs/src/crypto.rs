@@ -1,11 +1,11 @@
-use sha2::Digest;
-use ripemd::Digest as RipemdDigest;
-// use sha3::Digest as Sha3Digest; // Replaced sha3 crate
-use tiny_keccak::{Hasher, Keccak}; // For tiny-keccak
+use sha2::Digest; // This is sha2::Digest
+use ripemd::Digest as RipemdDigest; // Alias ripemd's Digest
+use ripemd::Ripemd160; // Import Ripemd160 struct separately
+use tiny_keccak::{Hasher, Keccak};
 
 use sha2::Sha256;
-use ripemd::Ripemd160;
-// use sha3::Keccak256; // Replaced sha3 crate
+// Ripemd160 is imported above
+// Keccak is imported above
 
 use k256::{SecretKey, PublicKey, elliptic_curve::sec1::ToEncodedPoint};
 use crate::utils;
