@@ -1,0 +1,20 @@
+[package]
+name = "keyhunt_rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+k256 = { version = "0.13.3", features = ["arithmetic", "sha256", "ecdsa"] }
+sha2 = "0.10"
+ripemd = "0.1" # For RIPEMD-160
+# sha3 = "0.10" # Replaced by tiny-keccak
+tiny-keccak = { version = "2.0.2", features = ["keccak"] }
+bloomfilter = "1.0"
+clap = { version = "4.4", features = ["derive"] }
+rayon = "1.8"
+hex = "0.4"
+bs58 = "0.5"
+num-bigint = "0.4"
+num-traits = "0.2"
