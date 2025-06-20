@@ -21,8 +21,9 @@
 #include <cstdlib>
 #include <cstring>
 #include <cctype>
+#if defined(__SSE2__) && (defined(__x86_64__) || defined(_M_X64) || defined(_M_IX86))
 #include <emmintrin.h>
-
+#endif
 #define MAX(x,y) (((x)>(y))?(x):(y))
 #define MIN(x,y) (((x)<(y))?(x):(y))
 

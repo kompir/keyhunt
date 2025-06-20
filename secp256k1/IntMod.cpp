@@ -16,7 +16,9 @@
 */
 
 #include "Int.h"
+#if defined(__SSE2__) && (defined(__x86_64__) || defined(_M_X64) || defined(_M_IX86))
 #include <emmintrin.h>
+#endif
 #include <string.h>
 
 #define MAX(x,y) (((x)>(y))?(x):(y))
